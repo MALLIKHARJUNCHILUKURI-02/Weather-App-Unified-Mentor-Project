@@ -1,0 +1,278 @@
+html,
+body {
+    height: 100%;
+    /* Ensures the full height of the page */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    /* Soft Sky Gradient */
+    background-attachment: fixed;
+    /* Keeps the background fixed while scrolling */
+    background-size: cover;
+    /* Ensures no repeat and covers the full height */
+    height: 100%;
+    /* Ensures the body takes full height of the viewport */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Aligns content at the top */
+    color: white;
+    /* Text color for readability */
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Aligns form and map at the top */
+    align-items: center;
+    padding-top: 20px;
+}
+
+#searchLocation {
+    font-size: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid blue;
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    background-color: green;
+    color: white;
+    font-weight: 700;
+    border: none;
+    /* Removes default border */
+    cursor: pointer;
+    /* Makes it clear it's clickable */
+}
+
+form {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    /* Adds space below the form */
+}
+
+#map {
+    height: 600px;
+    width: 80%;
+    margin-top: 20px;
+    border: 2px solid blue;
+    border-radius: 12px;
+    box-shadow: 10px 4px 12px rgba(255, 255, 255, 1);
+}
+#weather-info > p{
+    color: black;
+    font-size: 1.5rem;
+}
+.heading{
+    color:#800080;
+}
+.res-card {
+    width: 200px;
+    height: 200px;
+    background-color: #4facfe;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.climateresponse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.responsecards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Allows wrapping of cards on smaller screens */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.temperature-card {
+    background: linear-gradient(to bottom, #dc6916, #feb60e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.feels-like-card {
+    background: linear-gradient(135deg, #FFB6C1, #FF6347);
+}
+
+.cloud-card {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #cce5ff, #99c2ff);
+    /* Sky background */
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.cloud-card::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    top: 30%;
+    left: -10%;
+    opacity: 0.3;
+    box-shadow: 30px -10px 0 10px white,
+        50px 10px 0 20px white,
+        70px -10px 0 15px white;
+    animation: cloudMove 6s linear infinite alternate;
+}
+
+.cloud-card::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    top: 60%;
+    left: 50%;
+    opacity: 0.3;
+    box-shadow: 25px -10px 0 10px white,
+        45px 5px 0 15px white,
+        65px -5px 0 12px white;
+    animation: cloudMove 8s linear infinite alternate-reverse;
+}
+
+@keyframes cloudMove {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+
+.wind-card {
+    color: black;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 90%);
+    background-size: 200% 100%;
+    animation: windFlow 3s infinite linear;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes windFlow {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.humidity-card{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); /* Light blue, water effect */
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: black;
+}
+
+.humidity-card::before, .water-droplet-card::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6); /* White water droplets */
+    border-radius: 50%;
+    animation: dropAnimation 5s infinite linear;
+    opacity: 0.8;
+}
+
+/* Randomize the drop position for a more natural effect */
+.humidity-card::before {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.humidity-card::after {
+    top: 60%;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+/* Water droplet sliding down */
+@keyframes dropAnimation {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(60px); /* Drops slide down */
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(120px); /* Drops slide further down */
+        opacity: 0;
+    }
+}
+.pressure-card {
+    background: linear-gradient(135deg, #4B0082, #800080);
+}
+
+footer{
+    color: #4B0082;
+}
+@media screen and (max-width: 700px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

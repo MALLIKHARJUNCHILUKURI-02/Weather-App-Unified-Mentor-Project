@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimaTrek - Weather</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Search Form -->
+        <form id="searchForm">
+            <input type="text" id="searchLocation" placeholder="Search for a place" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Map Container -->
+        <div id="map" style="height: 500px;"></div>
+
+        <!-- Weather Details -->
+        <div class="climateresponse">
+            <h2 class="heading">Weather Details <small class="datetime"></small></h2>
+            <div id="weather-info">
+                <p>Select a location on the map or search above.</p>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <strong class="year"></strong> ClimaTrek. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
