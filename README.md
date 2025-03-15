@@ -1,4 +1,4 @@
-# 🌤 Weather App
+# 🌤 # ClimaTrek - Weather App
 
 ## 📌 Introduction
 This Weather App provides real-time weather information for any location. Users can search for a city by name or select a location directly on an interactive map to fetch weather details. The app integrates **OpenWeatherMap API** to retrieve accurate weather data and presents it in an intuitive UI.
@@ -56,37 +56,6 @@ This Weather App provides real-time weather information for any location. Users 
 5. **Search for a city** or **Click on the map** to view live weather details.
 
 
-# ClimaTrek - Weather App
-
-ClimaTrek is a weather application that allows users to search for a location or click on the map to get real-time weather updates.
-
-## Features
-- Interactive map for location selection
-- Search functionality for places
-- Displays real-time weather details including:
-  - Temperature
-  - Feels Like
-  - Cloud Cover
-  - Wind Speed
-  - Humidity
-  - Pressure
-- Uses OpenStreetMap and Leaflet for map integration
-- Fetches weather data using an API
-
-## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/climatrek.git
-   cd climatrek
-   ```
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
-3. Start the server:
-   ```sh
-   npm start
-   ```
 
 ## Troubleshooting: Map Not Loading
 If the map is not loading, it may be due to Leaflet not being loaded correctly. Follow these steps:
@@ -118,13 +87,8 @@ If the issue persists, download **Leaflet.js** and **Leaflet.css** from [Leaflet
 <script src="leaflet.js"></script>
 ```
 
-## License
-This project is licensed under the MIT License.
-
 ## Author
 [Mallikharjun Reddy Chilukuri] - [GitHub Profile](https://github.com/MALLIKHARJUNCHILUKURI-02)
-
-
 
 
 ## ⚡ Future Enhancements
