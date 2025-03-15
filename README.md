@@ -55,6 +55,78 @@ This Weather App provides real-time weather information for any location. Users 
    ```
 5. **Search for a city** or **Click on the map** to view live weather details.
 
+
+# ClimaTrek - Weather App
+
+ClimaTrek is a weather application that allows users to search for a location or click on the map to get real-time weather updates.
+
+## Features
+- Interactive map for location selection
+- Search functionality for places
+- Displays real-time weather details including:
+  - Temperature
+  - Feels Like
+  - Cloud Cover
+  - Wind Speed
+  - Humidity
+  - Pressure
+- Uses OpenStreetMap and Leaflet for map integration
+- Fetches weather data using an API
+
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/climatrek.git
+   cd climatrek
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the server:
+   ```sh
+   npm start
+   ```
+
+## Troubleshooting: Map Not Loading
+If the map is not loading, it may be due to Leaflet not being loaded correctly. Follow these steps:
+
+### 1. Check Console Errors
+- Open Developer Tools (`F12` or `Ctrl + Shift + I`).
+- Check the **Console** for errors like `L is not defined`.
+- If there's a network issue, go to the **Network → JS** tab and check if `leaflet.js` is loaded.
+
+### 2. Replace Leaflet CDN
+If the default CDN is not working, replace it with a different one.
+
+#### Default CDN:
+```html
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+```
+
+#### Alternative CDN (Use this if the map does not load):
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+```
+
+### 3. Use Local Leaflet Files
+If the issue persists, download **Leaflet.js** and **Leaflet.css** from [Leaflet's official website](https://leafletjs.com/download.html) and include them in your project:
+```html
+<link rel="stylesheet" href="leaflet.css" />
+<script src="leaflet.js"></script>
+```
+
+## License
+This project is licensed under the MIT License.
+
+## Author
+[Mallikharjun Reddy Chilukuri] - [GitHub Profile](https://github.com/MALLIKHARJUNCHILUKURI-02)
+
+
+
+
 ## ⚡ Future Enhancements
 - Add **7-day forecast** with graphical charts.
 - Implement **user location detection** for instant weather updates.
